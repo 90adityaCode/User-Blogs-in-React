@@ -21,14 +21,17 @@ class Contact extends Component {
   }
   render() {
     return (
-      <h6>contact</h6>
-      // <div className="container tab" >
-      //   <div className="row">          
-      //     // {this.renderProfile()}          
-      //     // // {this.renderTags()}
-      //     // {this.renderBlogs()}
-      //   </div>
-      // </div>
+      <div className="container tab" >
+        <div className="row"> 
+          
+         <div className="col-sm-4">         
+          {this.renderProfile()}
+         </div>
+         <div className="col-sm-8">            
+          {this.renderBlogs()}
+         </div> 
+        </div>
+      </div>
     );
   }
 }

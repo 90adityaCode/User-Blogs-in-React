@@ -3,7 +3,7 @@ import React from 'react';
 
  const Profile = ()=>{
    return  (
-    <div className="col-sm-4">
+     <>
       <h2>About Me</h2>
       <h5>Photo of me:</h5>
       <div className="fakeimg">Fake Image</div>
@@ -25,7 +25,7 @@ import React from 'react';
         </li>
       </ul>
       <hr className="d-sm-none" />
-    </div>
+    </>
    );
 }
 export default Profile;
