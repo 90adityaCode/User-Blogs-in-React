@@ -37,10 +37,7 @@ class Contact extends Component {
             {this.renderTags()}
           </div>
           <div className="col-sm-8">
-             <Switch>
-               <Route path="/contact" children={this.renderBlogs()} />
-               <Route path="/:tag" children={<Child />} />
-             </Switch>
+              {this.renderBlogs()}
           </div>
         </div>
       </div>
