@@ -31,10 +31,7 @@ class App extends Component {
     return (
       <>
       {this.rebderBanner()}
-       {this.renderNavbar()}
-       
-       {this.renderPageLayout()}  
-       {this.renderFooter()}
+       {this.renderNavbar()} 
       </>
     );
   }

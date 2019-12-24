@@ -1,18 +1,20 @@
-import React, {Component} from 'react';
-import App from './product-services/component/app/app';
+import React, { Component } from "react";
+import App from "./product-services/component/app/app";
+import Routing from "./product-services/routing/router";
 
-class Landing extends Component{
-
-  constructor(){
+import { BrowserRouter } from "react-router-dom";
+class Landing extends Component {
+  constructor() {
     super();
   }
 
-  render(){
+  render() {
     return (
-      <> 
-       <App />
-       </>
-      );
+      <BrowserRouter>
+        <App />
+        <Routing />
+      </BrowserRouter>
+    );
   }
 }
 
