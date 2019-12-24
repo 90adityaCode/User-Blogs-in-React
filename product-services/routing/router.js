@@ -8,10 +8,11 @@ import Tutorial from '../component/layout/page-layout/tutorials/tutorial';
 const Routing = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Contact} />
       <Route path="/blog" component={Blog} />
       <Route path="/tutorial" component={Tutorial} />
-      <Redirect to="/" />
+      <Route exact path="/contact" component={Contact} />
+      <Route path="/signIn" component={Tutorial} />
+      <Redirect to="/contact" />
     </Switch>
   );
 }

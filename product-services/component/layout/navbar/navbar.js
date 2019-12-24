@@ -22,7 +22,7 @@ import {
             <Link to="/blog" className="nav-link">Blog</Link> 
             </li>
             <li className="nav-item">
-            <Link to="/" className="nav-link">Contact</Link> 
+            <Link to="/contact" className="nav-link">Contact</Link> 
             </li>
             <li className="nav-item">
                <Link to="/signIn" className="nav-link" style={{"margin-left": '45em'}}>SignIn</Link> 
