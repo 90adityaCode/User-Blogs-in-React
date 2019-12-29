@@ -2,9 +2,11 @@ import React from 'react';
 import {  
   Link
 } from "react-router-dom";
+ 
 
  const Navbar = ()=>{
    return (
+     <> 
      <nav className="navbar navbar-expand-sm bg-dark navbar-dark container">
        
        <a className="navbar-brand" href="#">Web UI</a>
@@ -30,6 +32,7 @@ import {
           </ul>
         </div>  
       </nav>
+      </>
    ); 
    }
 export default Navbar;

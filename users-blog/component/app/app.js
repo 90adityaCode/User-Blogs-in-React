@@ -1,39 +1,38 @@
 import React, { Component } from "react";
-import HeaderBanner from "../layout/header-banner/banner"
- 
+
 import Navbar from "../layout/navbar/navbar";
 import Footer from "../layout/footer/footer";
-import PageLayout from "../layout/page-layout/layout"; 
+import PageLayout from "../layout/page-layout/layout";
 
+import fakeAuth from '../../helper/fakeAuth'; 
 class App extends Component {
-  constructor() {
-    super();
-    this.rebderBanner = this.rebderBanner.bind(this);
-    this.renderNavbar = this.renderNavbar.bind(this);    
+  constructor(props) {
+    super(props);
+    this.renderNavbar = this.renderNavbar.bind(this);
     this.renderFooter = this.renderFooter.bind(this);
-    this.renderPageLayout = this.renderPageLayout.bind(this); 
-  }
-  rebderBanner (){
-    return <HeaderBanner />
-     
-  }
-  renderNavbar() {
-    return <Navbar />
+    // this.renderPageLayout = this.renderPageLayout.bind(this);
+    this.state = {
+      authenticate: fakeAuth.isAuthenticated
+    }
   }
 
-  renderFooter() {
-     return <Footer />
+  renderNavbar() {
+    console.log(this.state.authenticate)
+    if(this.state.authenticate){
+      
+      return <Navbar />;
+    }
+    return null;
   }
-  renderPageLayout() {
-     return <PageLayout />
-  } 
+  // renderPageLayout() {
+  //   return <PageLayout />;
+  // }
+  renderFooter() {
+    return <Footer />;
+  }
+
   render() {
-    return (
-      <>
-      {this.rebderBanner()}
-       {this.renderNavbar()} 
-      </>
-    );
+    return <>{this.renderNavbar()}</>;
   }
 }
 

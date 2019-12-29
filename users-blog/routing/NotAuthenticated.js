@@ -4,13 +4,12 @@ import {Redirect, Route} from 'react-router-dom';
 
 const NotAuthenticated = ({component: Component, ...rest}) => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log('NotAuthenticated')
-    console.log('...rest',currentUser)
+    console.log('Component!!', Component)
     return (
         <Route {...rest} render={props => (
             currentUser ? (
                 <Redirect to={{
-                    pathname: '/',
+                    pathname: '/blog',
                     state: {from: props.location}
                 }}
                 />

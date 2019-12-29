@@ -1,17 +1,23 @@
 import React, { Component } from "react";
-import App from "./product-services/component/app/app";
-import Routing from "./product-services/routing/router";
-
-import { BrowserRouter } from "react-router-dom";
+import App from "./users-blog/component/app/app";
+import Routing from "./users-blog/routing/router";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
 class Landing extends Component {
   constructor() {
     super();
-  }
+  } 
 
-  render() {
+  render() { 
     return (
       <BrowserRouter>
-        <App />
+        <App /> 
         <Routing />
       </BrowserRouter>
     );
