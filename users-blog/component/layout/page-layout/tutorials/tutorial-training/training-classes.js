@@ -88,11 +88,23 @@ const Card = (props) => {
 class CardDetails extends Component{
    constructor(props){
      super(props);
-   }
+     this.state = {
+       points: 0
+     }
+   } 
+   static getDerivedStateFromProps(props, state) {
+     return {
+        points: 200 // update state with this
+     }
+  } 
+  componentDidMount() {
+     
+  }
+
    render(){
       return(
         <>
-            <h2>User Table</h2>
+            <h2>User Table{this.state.points}</h2>
              <table className="table">
               <thead>
                 <tr>
